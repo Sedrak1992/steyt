@@ -6,9 +6,6 @@ function App() {
   const f = () => {
     setCancat(cancat.concat("55"));
   };
-  // const a = (id) => {
-
-  // }
 
   const deleteItem = (i) => {
     const newItems = [...cancat];
@@ -33,7 +30,7 @@ function App() {
           >
             <div>{item}</div>
             <div>
-              <button onClick={deleteItem}> X </button>
+              <button onClick={() => deleteItem(i)}> X </button>
             </div>
           </div>
         ))}
