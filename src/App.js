@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <div className="App1">
-        {cancat.map((item) => (
+        {cancat.map((item,i) => (
           <div
             style={{
               border: "1px solid red",
