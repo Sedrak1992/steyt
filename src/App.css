@@ -7,8 +7,6 @@
   margin: 10px auto;
 }
 button {
-  display: flex;
-  justify-content: center;
   display: block;
 }
 .App-logo {

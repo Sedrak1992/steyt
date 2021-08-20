@@ -6,9 +6,17 @@ function App() {
   const f = () => {
     setCancat(cancat.concat("55"));
   };
+  // const a = (id) => {
+
+  // }
+
+  const deleteItem = (i) => {
+    const newItems = [...cancat];
+    newItems.splice(i, 1);
+    setCancat(newItems);
+  };
   return (
-    <div className="App" >
-      <h1>ghjk</h1>
+    <div className="App">
       <div className="App1">
         {cancat.map((item) => (
           <div
@@ -17,13 +25,23 @@ function App() {
               margin: "10px",
               width: "80px",
               height: "40px",
+              display: "flex",
+              justifyContent: 'space-around',
+              alignItems: 'center'
+              
             }}
           >
-            {item}
+            <div>{item}</div>
+            <div>
+              <button onClick={deleteItem}> X </button>
+            </div>
           </div>
         ))}
       </div>
-      <button onClick={f}> Click me + </button>
+      <button onClick={f} style={{ margin: "20px auto" }}>
+        {" "}
+        Click me +{" "}
+      </button>
     </div>
   );
 }
