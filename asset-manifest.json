@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/steyt/static/css/main.d92005c4.chunk.css",
+    "main.js": "/steyt/static/js/main.4f622eaf.chunk.js",
+    "main.js.map": "/steyt/static/js/main.4f622eaf.chunk.js.map",
+    "runtime-main.js": "/steyt/static/js/runtime-main.0628a4fe.js",
+    "runtime-main.js.map": "/steyt/static/js/runtime-main.0628a4fe.js.map",
+    "static/js/2.e4f641c7.chunk.js": "/steyt/static/js/2.e4f641c7.chunk.js",
+    "static/js/2.e4f641c7.chunk.js.map": "/steyt/static/js/2.e4f641c7.chunk.js.map",
+    "static/js/3.0d83609b.chunk.js": "/steyt/static/js/3.0d83609b.chunk.js",
+    "static/js/3.0d83609b.chunk.js.map": "/steyt/static/js/3.0d83609b.chunk.js.map",
+    "index.html": "/steyt/index.html",
+    "static/css/main.d92005c4.chunk.css.map": "/steyt/static/css/main.d92005c4.chunk.css.map",
+    "static/js/2.e4f641c7.chunk.js.LICENSE.txt": "/steyt/static/js/2.e4f641c7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0628a4fe.js",
+    "static/js/2.e4f641c7.chunk.js",
+    "static/css/main.d92005c4.chunk.css",
+    "static/js/main.4f622eaf.chunk.js"
+  ]
+}
