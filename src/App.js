@@ -1,31 +1,3 @@
-// import React, { useState } from "react";
-
-// const Form = () => {
-//   const [inputValue, setInputValue] = useState("");
-//   return (
-//     <div>
-//       <input value={inputValue} onChange={e => setInputValue(e.target.value)} />
-//       <p>{inputValue}</p>
-//       <button
-//         disabled={inputValue.length === 0}
-//         type="button"
-//         onClick={async () => {
-//           console.log(inputValue);
-//           try {
-//           } catch (e) {
-//             console.log("Sending error", e);
-//           }
-//         }}
-//         style={{ padding: 20, backgroundColor: "red", cursor: "pointer" }}
-//       >
-//         Send to ....
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default Form;
-
 import React, { useState } from "react";
 import "./App.css";
 
