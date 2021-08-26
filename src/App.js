@@ -1,22 +1,21 @@
 import React, { useState } from "react";
-import Component from "./Todo";
 import "./App.css";
 import "./css/Todo.css";
-import Todo from "./Todo";
+import Todo from "./Todo.js";
 
 function App() {
-  const [addTodo, setAddTodo] = useState([1, 2, 3]);
+  const [todos, setTodos] = useState([1, 2, 3]);
   const [inputValue, setInputValue] = useState("");
 
-  const deleteTodus = (i) => {
-    setAddTodo((currentItems) =>
+  const deleteTodo = (i) => {
+    setTodos((currentItems) =>
       currentItems.filter((item, index) => index !== i)
     );
   };
 
-  const addTodos = (event) => {
+  const addTodo = (event) => {
     if (inputValue !== "") {
-      setAddTodo(addTodo.concat([inputValue]));
+      setTodos(todos.concat([inputValue]));
       setInputValue("");
     } else {
       alert("enter input value");
@@ -26,8 +25,8 @@ function App() {
   return (
     <div className="App">
       <div className="App1">
-        {addTodo.map((item, i) => (
-          <Todo key={i} item={item} id={i} deleteTodus={deleteTodus} />
+        {todos.map((item, i) => (
+          <Todo key={i} item={item} id={i} deleteTodo={deleteTodo} />
         ))}
       </div>
       <div
@@ -40,7 +39,7 @@ function App() {
         }}
       >
         <button
-          onClick={addTodos}
+          onClick={addTodo}
           style={{ textAlign: "center", width: "60px" }}
         >
           {" "}
