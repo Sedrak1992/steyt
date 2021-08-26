@@ -1,18 +1,20 @@
 import React, { useState } from "react";
-import Component from "./Component";
+import Component from "./Todo";
 import "./App.css";
 import "./css/Todo.css";
+import Todo from "./Todo";
 
 function App() {
   const [addTodo, setAddTodo] = useState([1, 2, 3]);
   const [inputValue, setInputValue] = useState("");
 
-  const deleteItem = (i) => {
+  const deleteTodus = (i) => {
     setAddTodo((currentItems) =>
       currentItems.filter((item, index) => index !== i)
     );
   };
-  const deleteTodo = (event) => {
+
+  const addTodos = (event) => {
     if (inputValue !== "") {
       setAddTodo(addTodo.concat([inputValue]));
       setInputValue("");
@@ -25,15 +27,31 @@ function App() {
     <div className="App">
       <div className="App1">
         {addTodo.map((item, i) => (
-          <Component key={i} item={item} id={i} deleteItem={deleteItem}/>
+          <Todo key={i} item={item} id={i} deleteTodus={deleteTodus} />
         ))}
       </div>
-      <button onClick={deleteTodo}> Add ++</button>
-      <div style={{ margin: "20px auto", display: "babel" }}>
-        <input
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
+      <div
+        style={{
+          width: "40%",
+          margin: "30px auto",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <button
+          onClick={addTodos}
+          style={{ textAlign: "center", width: "60px" }}
+        >
+          {" "}
+          Add ++{" "}
+        </button>
+        <div style={{ margin: "20px auto" }}>
+          <input
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+          />
+        </div>
       </div>
     </div>
   );

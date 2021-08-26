@@ -1,15 +1,14 @@
-function Component({item,id,deleteItem}) {
+function Todo({item,id,deleteTodus}) {
     
   return (
     <div>
-      
       <div className="todo">
         <div>{item}</div>
         <div>
-          <button onClick={() => deleteItem(id)}> X </button>
+          <button onClick={() => deleteTodus(id)}> X </button>
         </div>
       </div>
     </div>
   );
 }
-export default Component;
+export default Todo;
