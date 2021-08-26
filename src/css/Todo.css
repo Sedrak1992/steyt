@@ -1,8 +1,8 @@
 .todo {
   border: 1px solid red;
   margin: 10px;
-  width: 220px;
-  height: 50px;
+  width: 290px;
+  height: 40px;
   display: flex;
   justify-content: space-around;
   align-items: center;
