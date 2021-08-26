@@ -3,8 +3,15 @@ import "./App.css";
 import "./css/Todo.css";
 import Todo from "./Todo.js";
 
+const randomColor = () => `#${Math.floor(Math.random()*16777215).toString(16)}`;
+
+
 function App() {
-  const [todos, setTodos] = useState([1, 2, 3]);
+  const [todos, setTodos] = useState([
+    { name: "1", color: randomColor() },
+    { name: "2", color: randomColor() },
+    { name: "3", color: randomColor() },
+  ]);
   const [inputValue, setInputValue] = useState("");
 
   const deleteTodo = (i) => {
@@ -15,7 +22,7 @@ function App() {
 
   const addTodo = (event) => {
     if (inputValue !== "") {
-      setTodos(todos.concat([inputValue]));
+      setTodos(todos.concat({name: inputValue , color: randomColor()}));
       setInputValue("");
     } else {
       alert("enter input value");
